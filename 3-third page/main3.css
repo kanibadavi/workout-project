@@ -97,6 +97,7 @@ header form input{
   display:flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .div a{
@@ -111,7 +112,7 @@ header form input{
 
 
 .image3{
-  padding: 20px;
+  
   width: 450px;
   height: 300px;
   object-fit: cover;
