@@ -15,8 +15,12 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
-header nav a{
+header ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.anchor{
     margin: 40px;
     text-decoration: none;
     color: black;
@@ -36,6 +40,7 @@ header form input{
 
 .image2{
     height: 500px;
+    object-fit: cover;
 }
 
 .big-image{
@@ -196,4 +201,27 @@ header form input{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+@media screen and (max-width:375px){
+  header form input{
+    display:none
+  }
+  .anchor{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .anchor-main,.big-image,.heading3{
+    display: none;
+  }
+ .linked-image{
+  display: grid;
+  grid-template-columns: 1ref 1ref;
+ }
+ .container{
+  display: grid;
+  grid-template-columns: 1ref 1ref;
+ }
+ 
+
 }

@@ -114,7 +114,7 @@ header form input{
 
 .image3{
  
-  width: 450px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
 } 
