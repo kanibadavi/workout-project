@@ -47,7 +47,6 @@ function makeImages(data2) {
   container.classList.add("container2");
   main.append(container);
   data2.forEach((users, index) => {
-    // const cards = document.createElement("div");
 
     const image3 = document.createElement("img");
     image3.src = users.urls.small;
@@ -58,7 +57,6 @@ function makeImages(data2) {
     link.textContent = links[index];
     div.append(image3, link);
     container.append(div);
-
     image3.classList.add("image3");
   });
 }

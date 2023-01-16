@@ -16,7 +16,7 @@ header{
     align-items: center;
 }
 
-header nav a{
+.anchor{
     margin: 40px;
     text-decoration: none;
     color: black;
@@ -75,18 +75,19 @@ header form input{
     text-align: center;
   }
   
-  .container{
+  .container, .container3{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  .first-image{
+  .first-image, .first-image2{
     width: 100%;
     height: 500px;
     object-fit: cover;
   }
+
 
   main section{
     display: flex;
@@ -118,3 +119,37 @@ header form input{
   height: 300px;
   object-fit: cover;
 } 
+
+
+
+@media (max-width: 1320px) {
+  .container,.first-image2{
+    display: none;
+  }
+ 
+}
+
+@media screen and (max-width: 900px) {
+  .container2 {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  header form input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header form input {
+    display: none;
+  }
+  .anchor {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .anchor-main,
+  .big-image,
+  .heading3 {
+    display: none;
+  }
+
+}

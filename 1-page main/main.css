@@ -1,112 +1,118 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Concert One', cursive;
-    box-sizing:border-box
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Concert One', cursive;
+  box-sizing: border-box;
 }
 
-.logo{
-    width: 100px;
-    height: 100px;
+.logo {
+  width: 100px;
+  height: 100px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-header ul{
+header ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
-.anchor{
-    margin: 40px;
-    text-decoration: none;
-    color: black;
+.anchor {
+  margin: 40px;
+  text-decoration: none;
+  color: black;
 }
 
-header form input{
-    margin-right: 20px;
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 20px;
-    color:#000;
-    border-radius: 20%;
+header form input {
+  margin-right: 20px;
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #000;
+  border-radius: 20%;
 }
 
-.image2{
-    height: 500px;
-    object-fit: cover;
+.image2 {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.big-image{
-  width: 640px;
+.big-image {
+  max-width: 550px;
   height: 450px;
+  object-fit: cover;
 }
 
-.div{
-  display:flex;
+.div {
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
-.div a{
+.div a {
   text-decoration: none;
   color: #000;
 }
 
-.container2{
+.container2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
-
-.image3{
+.image3 {
   width: 100%;
   height: 300px;
   object-fit: cover;
-} 
+}
 
-.image4{
+.image4 {
   width: 350px;
   height: 200px;
   padding: 20px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.image4:hover{
+.image4:hover {
   transform: translateY(-10px);
 }
 
-.image-about{
+.image-about {
   width: 100%;
   height: 300px;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
-  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
 }
-.linked-image{
+.linked-image {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.linked-para{
+.linked-para {
   text-decoration: none;
   color: black;
 }
 
-.about{
+.about {
   position: relative;
   text-align: center;
 }
 
-.container{
+.container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,7 +132,8 @@ header form input{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -148,12 +155,13 @@ header form input{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text1{
-    color: white;
+.text1 {
+  color: white;
 }
 
 /* Caption text */
@@ -188,7 +196,8 @@ header form input{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -199,29 +208,61 @@ header form input{
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width:375px){
-  header form input{
-    display:none
+
+
+@media (max-width: 1320px) {
+  .wrapper {
+    flex-wrap: wrap;
   }
-  .anchor{
+  .linked-image {
+    width: 100% !important;
+  }
+  .linked-para {
+    width: 100% !important;
+  }
+  .big-image {
+    width: 100%;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 1320px) {
+  .container,.first-image2{
+    display: none;
+  }
+ 
+}
+
+@media screen and (max-width: 900px) {
+  .container2 {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  header form input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header form input {
+    display: none;
+  }
+  .anchor {
     display: flex;
     justify-content: space-evenly;
   }
-  .anchor-main,.big-image,.heading3{
+  .anchor-main,
+  .big-image,
+  .heading3 {
     display: none;
   }
- .linked-image{
-  display: grid;
-  grid-template-columns: 1ref 1ref;
- }
- .container{
-  display: grid;
-  grid-template-columns: 1ref 1ref;
- }
- 
 
 }
+
