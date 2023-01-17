@@ -139,9 +139,6 @@ header form input{
 }
 
 @media screen and (max-width: 600px) {
-  header form input {
-    display: none;
-  }
   .anchor {
     display: flex;
     justify-content: space-evenly;

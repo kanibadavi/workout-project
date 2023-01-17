@@ -12,15 +12,10 @@
 
 header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-header ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
+
 .anchor {
   margin: 40px;
   text-decoration: none;
@@ -39,6 +34,7 @@ header form input {
   border-radius: 20%;
 }
 
+
 .image2 {
   height: 500px;
   width: 100%;
@@ -46,9 +42,13 @@ header form input {
 }
 
 .big-image {
-  max-width: 550px;
+  width: 900px;
   height: 450px;
   object-fit: cover;
+}
+
+.new-headig{
+  margin-left: 500px;
 }
 
 .div {
