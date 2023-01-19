@@ -65,13 +65,15 @@ header form input{
   .fit-man,.health{
     object-fit: cover;
     width:1000px;
-    height: 500px;
+    /* height: 500px; */
+    width: 50%;
   }
   
   .first-section,.second-section{
     display:flex;
     justify-content: space-between;
     align-items: center;
+   
   }
 
   .heading-one{
@@ -80,8 +82,8 @@ header form input{
     line-height: 30px;
   }
 
-  .second-section{
+  /* .second-section{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-  }
+  } */
