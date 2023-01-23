@@ -64,11 +64,13 @@ header form input{
 
   .fit-man,.health{
     object-fit: cover;
-    width:1000px;
-    /* height: 500px; */
+    /* width:1000px; */
     width: 50%;
   }
   
+  .fit-man{
+    order: 1;
+  }
   .first-section,.second-section{
     display:flex;
     justify-content: space-between;
@@ -80,10 +82,12 @@ header form input{
     display: block;
     padding:20px;
     line-height: 30px;
+    order: 2;
   }
 
-  /* .second-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  } */
+  @media screen and (max-width:800px){
+    .first-section{
+      /* display: flex; */
+      flex-direction: column !important;
+    }
+  }

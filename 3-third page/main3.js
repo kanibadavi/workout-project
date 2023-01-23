@@ -16,16 +16,16 @@ async function data(url) {
   try {
     const response = await fetch(url);
     const users = await response.json();
-    console.log(users);
+   
     makeImages(users.results);
   } catch (err) {
-    console.log(err);
+
   }
 }
 data(url);
 
 function makeImages(data2) {
-  console.log(data2);
+
   const main = document.querySelector("main");
   const container = document.createElement("article");
   container.classList.add("container2");

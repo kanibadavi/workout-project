@@ -17,6 +17,9 @@ header {
   border-bottom: 1px solid #E2E8F0;
 }
 
+main{
+  padding: 0 50px;
+}
 
 .navbar {
   display: flex;
@@ -123,16 +126,6 @@ header form input {
   object-fit: cover;
 }
 
-.image4 {
-  width: 350px;
-  height: 200px;
-  padding: 20px;
-  transition: 0.5s;
-}
-
-.image4:hover {
-  transform: translateY(-10px);
-}
 
 .image-about {
   width: 100%;
@@ -147,7 +140,7 @@ header form input {
 .linked-image {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -155,6 +148,28 @@ header form input {
   text-decoration: none;
   color: black;
 }
+
+.para{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  text-decoration: none;
+  color: black;
+}
+.para .image4{
+  width: 330px;
+  height: 175px;
+  object-fit: cover;
+  padding: 0 20px;
+  transition: 0.5s;
+}
+
+.image4:hover {
+  transform: translateY(-10px);
+}
+
 
 .about {
   position: relative;
@@ -270,6 +285,10 @@ header form input {
 @media (max-width: 1320px) {
   .wrapper {
     flex-wrap: wrap;
+    gap: 40px;
+  }
+  .para{
+    margin-bottom: 30px;
   }
   .linked-image {
     width: 100% !important;
@@ -284,10 +303,13 @@ header form input {
 }
 
 @media (max-width: 1320px) {
-  .container,.first-image2{
+  .first-image2{
     display: none;
   }
- 
+  .para .image4{
+    width: 450px;
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 900px) {

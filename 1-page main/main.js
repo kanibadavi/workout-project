@@ -16,10 +16,10 @@ async function data(url) {
   try {
     const response = await fetch(url);
     const users = await response.json();
-    console.log(users);
+   
     makeImages(links,users.results);
   } catch (err) {
-    console.log(err);
+    
   }
 }
 data(url);
@@ -40,7 +40,7 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 function makeImages(links,data2) {
-  console.log(data2);
+ 
   const main = document.querySelector("main");
   const container = document.createElement("article");
   container.classList.add("container2");
@@ -64,11 +64,11 @@ const input= document.querySelector("input")
 input.addEventListener("input", (e)=>{
  
   const elements = document.querySelectorAll(".wrapper")
-  console.log(elements);
+  
   const search = e.target.value
-  console.log(search);
+ 
   for(let el of elements){
-    // console.log(el);
+    
     if(el.getAttribute("data-name").toLowerCase().includes(search.toLowerCase())){
       el.style.display = "inline-block"
     }else {
@@ -77,12 +77,3 @@ input.addEventListener("input", (e)=>{
   }
 });
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
