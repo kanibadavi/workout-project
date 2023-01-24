@@ -114,7 +114,7 @@ header form input{
 } 
 
 @media (max-width: 1320px) {
-  .container,.first-image2{
+  .first-image2{
     display: none;
   }
  
