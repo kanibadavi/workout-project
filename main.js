@@ -39,7 +39,7 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
-function makeImages(links,data2) {
+function makeImages(data2) {
  
   const main = document.querySelector("main");
   const container = document.createElement("article");
@@ -59,21 +59,3 @@ function makeImages(links,data2) {
     image3.classList.add("image3");
   });
 }
-
-const input= document.querySelector("input")
-input.addEventListener("input", (e)=>{
- 
-  const elements = document.querySelectorAll(".wrapper")
-  
-  const search = e.target.value
- 
-  for(let el of elements){
-    
-    if(el.getAttribute("data-name").toLowerCase().includes(search.toLowerCase())){
-      el.style.display = "inline-block"
-    }else {
-      el.style.display = "none"
-    }
-  }
-});
-
