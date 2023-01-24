@@ -307,17 +307,21 @@ header form input {
     display: none;
   }
   .image4{
-    width: 450px;
+    width: 400px;
     height: 300px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .container2, .linked-image{
+  .container2{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   header form input {
     display: none;
+  }
+  .image4{
+    width: 300px;
+    height: 200px;
   }
 }
 
@@ -339,13 +343,13 @@ header form input {
   }
 
   .image4{
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
-
-  /* .linked-image{
-    display: block;
-
-  } */
-
+}
+@media screen and (max-width: 450px) {
+  .image4{
+    width: 150px;
+    height: 150px;
+  }
 }
