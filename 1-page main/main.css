@@ -158,7 +158,7 @@ header form input {
   text-decoration: none;
   color: black;
 }
-.para .image4{
+.image4{
   width: 330px;
   height: 175px;
   object-fit: cover;
@@ -306,14 +306,14 @@ header form input {
   .first-image2{
     display: none;
   }
-  .para .image4{
+  .image4{
     width: 450px;
     height: 300px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .container2 {
+  .container2, .linked-image{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   header form input {
@@ -334,35 +334,18 @@ header form input {
   .heading3 {
     display: none;
   }
-
-}
-
-@media only screen and (max-width: 768px) {
-  .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: #fff;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
+  .linked-image {
+    grid-template-columns: 1fr;
   }
 
-  .nav-menu.active {
-      left: 0;
+  .image4{
+    width: 250px;
+    height: 300px;
   }
 
-  .nav-item {
-      margin: 2.5rem 0;
-  }
+  /* .linked-image{
+    display: block;
 
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
+  } */
 
 }
