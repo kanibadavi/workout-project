@@ -43,13 +43,6 @@ header form input{
     position: relative;
     text-align: center;
   }
-  
-  .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 
   .image-about{
     width: 100%;
@@ -70,7 +63,7 @@ header form input{
     text-align: center;
   }
   
-  .container{
+  .container3{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -114,7 +107,7 @@ header form input{
 } 
 
 @media (max-width: 1320px) {
-  .first-image2{
+  .first-image2,.container3{
     display: none;
   }
  
