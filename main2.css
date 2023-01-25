@@ -121,7 +121,41 @@ header form input{
   object-fit: cover;
 } 
 
-
+header {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainMenu {
+  display: flex;
+  list-style: none;
+}
+.mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+.mainMenu li a:hover {
+  background: rgb(33, 177, 177);
+}
+.openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+.mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
 
 @media (max-width: 1320px) {
   .container,.first-image2{
@@ -140,7 +174,7 @@ header form input{
 }
 
 @media screen and (max-width: 600px) {
-  .anchor {
+  /* .anchor {
     display: flex;
     justify-content: space-evenly;
   }
@@ -148,6 +182,37 @@ header form input{
   .big-image,
   .heading3 {
     display: none;
-  }
+  } */
 
+  .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .openMenu {
+    display: block;
+  }
+  .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
 }
