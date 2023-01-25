@@ -26,38 +26,22 @@ async function data(url) {
 data(url);
 
 function makeImages(data2) {
-
+ 
   const main = document.querySelector("main");
   const container = document.createElement("article");
   container.classList.add("container2");
   main.append(container);
-  data2.forEach((users, index) => {
+  links.forEach((linkText, index) => {
+
     const image3 = document.createElement("img");
-    image3.src = users.urls.small;
+    image3.src =data2[index].urls.small;
     const link = document.createElement("a");
     const div = document.createElement("div");
     div.classList.add("div");
     link.href = "#";
-    link.textContent = links[index];
+    link.textContent = linkText;
     div.append(image3, link);
     container.append(div);
     image3.classList.add("image3");
   });
 }
-
-const input= document.querySelector("input")
-input.addEventListener("input", (e)=>{
- 
-  const elements = document.querySelectorAll(".wrapper")
-  console.log(elements);
-  const search = e.target.value
-  console.log(search);
-  for(let el of elements){
-    // console.log(el);
-    if(el.getAttribute("data-name").toLowerCase().includes(search.toLowerCase())){
-      el.style.display = "inline-block"
-    }else {
-      el.style.display = "none"
-    }
-  }
-});
