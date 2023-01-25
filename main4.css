@@ -95,7 +95,7 @@ header form input{
     .fit-man,.health{
       width: 100%;
     }
-    .anchor-main{
+    .anchor-main,header form input{
       display: none;
     }
   }
