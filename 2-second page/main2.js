@@ -45,3 +45,20 @@ function makeImages(data2) {
     image3.classList.add("image3");
   });
 }
+
+const input= document.querySelector("input")
+input.addEventListener("input", (e)=>{
+ 
+  const elements = document.querySelectorAll(".wrapper")
+  console.log(elements);
+  const search = e.target.value
+  console.log(search);
+  for(let el of elements){
+    // console.log(el);
+    if(el.getAttribute("data-name").toLowerCase().includes(search.toLowerCase())){
+      el.style.display = "inline-block"
+    }else {
+      el.style.display = "none"
+    }
+  }
+});
