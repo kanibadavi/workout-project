@@ -17,7 +17,7 @@ async function data(url) {
     const response = await fetch(url);
     const users = await response.json();
    
-    makeImages(links,users.results);
+    makeImages(users.results);
   } catch (err) {
     
   }
