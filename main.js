@@ -17,28 +17,14 @@ async function data(url) {
     const response = await fetch(url);
     const users = await response.json();
    
-    makeImages(links,users.results);
+    makeImages(users.results);
   } catch (err) {
     
   }
 }
 data(url);
 
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
+
 function makeImages(data2) {
  
   const main = document.querySelector("main");
@@ -58,4 +44,20 @@ function makeImages(data2) {
     container.append(div);
     image3.classList.add("image3");
   });
+}
+
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
 }

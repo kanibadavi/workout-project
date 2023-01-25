@@ -63,7 +63,7 @@ header form input{
     text-align: center;
   }
   
-  .container3{
+  .container4, .container3{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -106,8 +106,8 @@ header form input{
   object-fit: cover;
 } 
 
-@media (max-width: 1320px) {
-  .first-image2{
+@media screen and (max-width: 1320px) {
+  .first-image2,.container3{
     display: none;
   }
  
@@ -129,8 +129,7 @@ header form input{
     justify-content: space-evenly;
   }
   .anchor-main,
-  .big-image,
-  .heading3 {
+  .heading3{
     display: none;
   }
 

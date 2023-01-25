@@ -347,9 +347,15 @@ header form input {
     height: 200px;
   }
 }
+<<<<<<< HEAD:1-page main/main.css
+
+.new{
+  ;
+=======
 @media screen and (max-width: 450px) {
   .image4{
     width: 150px;
     height: 150px;
   }
+>>>>>>> 6648176f6d0d75588e861a068fcb0eb56a8949cc:main.css
 }

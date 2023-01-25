@@ -26,19 +26,20 @@ async function data(url) {
 data(url);
 
 function makeImages(data2) {
-
+ 
   const main = document.querySelector("main");
   const container = document.createElement("article");
   container.classList.add("container2");
   main.append(container);
-  data2.forEach((users, index) => {
+  links.forEach((linkText, index) => {
+
     const image3 = document.createElement("img");
-    image3.src = users.urls.small;
+    image3.src =data2[index].urls.small;
     const link = document.createElement("a");
     const div = document.createElement("div");
     div.classList.add("div");
     link.href = "#";
-    link.textContent = links[index];
+    link.textContent = linkText;
     div.append(image3, link);
     container.append(div);
     image3.classList.add("image3");
