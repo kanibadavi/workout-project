@@ -44,23 +44,3 @@ function makeImages(data2) {
     image3.classList.add("image3");
   });
 }
-<<<<<<< HEAD:3-third page/main3.js
-
-const input= document.querySelector("input")
-input.addEventListener("input", (e)=>{
- 
-  const elements = document.querySelectorAll(".wrapper")
-  console.log(elements);
-  const search = e.target.value
-  console.log(search);
-  for(let el of elements){
-    // console.log(el);
-    if(el.getAttribute("data-name").toLowerCase().includes(search.toLowerCase())){
-      el.style.display = "inline-block"
-    }else {
-      el.style.display = "none"
-    }
-  }
-});
-=======
->>>>>>> 6648176f6d0d75588e861a068fcb0eb56a8949cc:main3.js
