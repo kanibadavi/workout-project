@@ -83,7 +83,7 @@ header form input{
 
   @media screen and (max-width:800px){
     .first-section{
-      /* display: flex; */
+      display: flex;
       flex-direction: column !important;
     }
     .heading-one{
@@ -94,5 +94,8 @@ header form input{
     }
     .fit-man,.health{
       width: 100%;
+    }
+    .anchor-main{
+      display: none;
     }
   }
