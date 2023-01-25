@@ -11,55 +11,40 @@ const links = [
   "Can't Do a Chaturanga? Here's What Your Body's Trying to Tell You",
 ];
 
-let url = `https://api.unsplash.com/search/photos?query=workout&client_id=${key}&orientation=landscape&page=3&per_page=9`;
+let url = `https://api.unsplash.com/search/photos?query=fitness&client_id=${key}&orientation=landscape&page=3&per_page=9`;
 async function data(url) {
   try {
     const response = await fetch(url);
     const users = await response.json();
-    console.log(users);
-    makeImages(users.results);
+   
+    makeImages(links,users.results);
   } catch (err) {
-    console.log(err);
+    
   }
 }
 data(url);
 
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
-
 function makeImages(data2) {
-  console.log(data2);
+ 
   const main = document.querySelector("main");
   const container = document.createElement("article");
   container.classList.add("container2");
   main.append(container);
-  data2.forEach((users, index) => {
+  links.forEach((linkText, index) => {
 
     const image3 = document.createElement("img");
-    image3.src = users.urls.small;
+    image3.src =data2[index].urls.small;
     const link = document.createElement("a");
     const div = document.createElement("div");
     div.classList.add("div");
     link.href = "#";
-    link.textContent = links[index];
+    link.textContent = linkText;
     div.append(image3, link);
     container.append(div);
     image3.classList.add("image3");
   });
 }
+<<<<<<< HEAD:3-third page/main3.js
 
 const input= document.querySelector("input")
 input.addEventListener("input", (e)=>{
@@ -77,3 +62,5 @@ input.addEventListener("input", (e)=>{
     }
   }
 });
+=======
+>>>>>>> 6648176f6d0d75588e861a068fcb0eb56a8949cc:main3.js
