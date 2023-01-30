@@ -22,7 +22,7 @@ header{
     color: black;
 }
 
-header form input{
+#search{
     margin-right: 20px;
     background: transparent;
     flex: 1;
@@ -91,6 +91,7 @@ header form input{
   .mainMenu {
     display: flex;
     list-style: none;
+    align-items: center;
   }
   .mainMenu li a {
     display: inline-block;

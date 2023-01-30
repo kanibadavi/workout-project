@@ -131,6 +131,7 @@ header {
 .mainMenu {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 .mainMenu li a {
   display: inline-block;
