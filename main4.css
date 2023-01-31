@@ -12,7 +12,7 @@
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
 }
 
@@ -90,6 +90,7 @@ header{
   }
   .mainMenu {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     align-items: center;
   }
